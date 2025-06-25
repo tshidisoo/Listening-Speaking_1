@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Listening & Speaking Practice Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <header class="quiz-header">
+            <h1>🎯 English Speaking & Listening Quiz</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="quiz-info">
+                <span id="questionCounter">Question 1 of 20</span>
+                <span id="score">Score: 0</span>
+            </div>
+        </header>
+
+        <main class="quiz-content">
+            <div class="question-section" id="questionSection">
+                <div class="scenario-badge" id="scenarioBadge">Introduction</div>
+                <h2 class="question-text" id="questionText">Loading question...</h2>
+                
+                <div class="audio-section" id="audioSection" style="display: none;">
+                    <audio id="quizAudio" src="./ElevenLabs_Text_to_Speech_audio.mp3"></audio>
+                    <button class="audio-btn" id="playAudioBtn">🔊 Play Audio</button>
+                    <div class="audio-text" id="audioText"></div>
+                </div>
+            </div>
+
+            <div class="options-section" id="optionsSection">
+                <!-- Options will be dynamically inserted here -->
+            </div>
+
+            <div class="input-section" id="inputSection" style="display: none;">
+                <textarea id="textInput" placeholder="Type your response here..." rows="4"></textarea>
+                <button class="submit-btn" id="submitInput">Submit Answer</button>
+            </div>
+
+            <div class="feedback-section" id="feedbackSection" style="display: none;">
+                <div class="feedback-content" id="feedbackContent"></div>
+                <button class="next-btn" id="nextButton">Next Question</button>
+            </div>
+        </main>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <div class="results-content">
+                <h2>🎉 Quiz Complete!</h2>
+                <div class="final-score" id="finalScore"></div>
+                <div class="performance-breakdown" id="performanceBreakdown"></div>
+                <div class="recommendations" id="recommendations"></div>
+                <button class="restart-btn" id="restartBtn">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
